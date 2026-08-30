@@ -1,9 +1,10 @@
 
 • Architecture diagram (RLES VMs, Windows AD, pfSense, trust)
+![alt text](image.png)
 
 • Design decisions & justifications
 
-• Validation evidence (6–8 well-captioned screenshots + output
+• Validation evidence (6–8 well-captioned screenshots + output)
 
 • Troubleshooting journal (minimum 2–3 detailed entries)
 
