@@ -5,7 +5,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 dnf install sssd
 realm join group3l.com
-cat  << EOF
+cat  << EOF >> /etc/sssd/sssd.conf
 [domain/group3.com]
 subdomains_homedir = /home/%d/%u
 default_shell = /bin/bash
@@ -15,7 +15,7 @@ fallback_homedir = /home/%u
 subdomains_homedir = /home/%d/%u
 default_shell = /bin/bash
 fallback_homedir = /home/%u
-EOF >> /etc/sssd/sssd.conf
+EOF 
 
 authconfig --enablemkhomedir --update
 systemctl enable --now oddjobd.service
